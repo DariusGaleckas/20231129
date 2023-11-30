@@ -3,12 +3,15 @@ import { useState } from 'react';
 export default function Create({ setCreate }) {
 
     const [color, setColor] = useState('#ffffff');
-    const [size, setSize] = useState(20);
+    const [size, setSize] = useState(100);
     const add = _ => {
-        setCreate({ color, size}
+        setCreate({
+          color,
+          size: parseInt(size)
+        }
             );
             setColor('#ffffff');
-            setSize(20);
+            setSize(100);
     }
 
 
